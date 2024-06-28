@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-dark text-bg-dark">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title><ninjato:title /></title>
+        <link rel="stylesheet" href="/css/bootstrap.min.css" asp-append-version="true" />
+        <link rel="stylesheet" href="/css/site.css" asp-append-version="true" />
+    </head>
+    <body class="bg-dark text-bg-dark">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light text-dark fixed-top">
+                <div class="container">
+                    <a class="navbar-brand" href="/">
+                        <ninjato:name />
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="nav-content">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <!-- @foreach (var item in Model.Items)
+                            {
+                            <li class="nav-item">
+                                <a class="nav-link" href="@item.Href">
+                                    @if (item.Icon != BootstrapIcons.None)
+                                    {
+                                        <icon icon-name="@item.Icon" />
+                                    }
+                                    @if (!string.IsNullOrWhiteSpace(item.Text))
+                                    {
+                                        @item.Text
+                                    }
+                                    <icon icon-name="ChevronCompactRight" />
+                                </a>
+                            </li>
+                            } -->
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="container">
+                <ninjato:body />
+            </div>
+        </main>
+        <footer class="footer text-muted mt-4">
+            <div class="container mt-4">
+                <ninjato:copyright />
+            </div>
+        </footer>
+        <script src="/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="/js/site.js" asp-append-version="true"></script>
+    </body>
+</html>
